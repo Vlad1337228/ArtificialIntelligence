@@ -1,0 +1,36 @@
+﻿<Window x:Class="AI_laba1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AI_laba1"
+        mc:Ignorable="d"
+        Title="Игра 'Угадай транспорт'" Height="394" Width="389" ResizeMode="NoResize" Icon="/Resources/free-icon-question-3106703.ico">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="316*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="Btn_Search" Content="Режим поиска ответа" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" Height="41" Width="346" Grid.Column="1" Click="Btn_Search_Click" Grid.Row="1"/>
+        <Button x:Name="Btn_Study" Content="Режим обучения" HorizontalAlignment="Center" Margin="0,91,0,0" VerticalAlignment="Top" Height="41" Width="346" Grid.Column="1" Grid.Row="1" Click="Btn_Study_Click"/>
+        <Button x:Name="Btn_AllRowDB" Content="Показать всю таблицу базы знаний" HorizontalAlignment="Center" VerticalAlignment="Top" Height="41" Width="346" Grid.Column="1" Grid.Row="1" Margin="0,137,0,0" Click="Btn_AllRowDB_Click"/>
+        <Button x:Name="Btn_InfoObject" Content="Показать все сведения о конкретном объекте" HorizontalAlignment="Center" Margin="0,183,0,0" VerticalAlignment="Top" Height="41" Width="346" Grid.Column="1" Grid.Row="1" Click="Btn_InfoObject_Click"/>
+        <Button x:Name="Btn_WhyAnswer" Grid.Column="1" Content="Режим анализа базы знаний (почему такой ответ?)" HorizontalAlignment="Center" Margin="0,229,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="346" Click="Btn_WhyAnswer_Click"/>
+
+    </Grid>
+</Window>
